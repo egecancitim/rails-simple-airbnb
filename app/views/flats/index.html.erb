@@ -1,0 +1,31 @@
+<div class="container">
+<div class="row">
+  <div class="col-12">
+    <h1><strong>Flats</strong></h1>
+  </div>
+</div>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+  <div class="col-4">
+    <div class="card">
+      <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+      <div class="card-content">
+        <h4> <%= link_to flat.name, flat, class: "name" %> </h4>
+        <p> <%= flat.address %> </p>
+        <p> <%= flat.description %> </p>
+        <div class="icons">
+          <p> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %> </p>
+          <p> <i class="fas fa-user-friends"></i> <%= flat.number_of_guests %> </p>
+          <%= link_to flat, method: :delete, data: { confirm: 'Are you sure?' } do%>
+          <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+  <%= link_to 'New Flat', new_flat_path, class: "btn btn-primary" %>
+</div>

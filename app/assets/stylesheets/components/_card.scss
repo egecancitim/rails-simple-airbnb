@@ -1,0 +1,37 @@
+.card {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+  margin: .5rem 0 1rem 0;
+  background-color: #F8F9FA;
+}
+
+.name {
+  margin-bottom: .5rem;
+  font-family: Helvetica;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #BA274A;
+  &:hover {
+    text-decoration: none;
+    color: #D05353;
+    transition: 0.3s;
+  }
+}
+
+.flat-card-image {
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-content {
+  padding: 24px;
+  background-color: #F8F9FA;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200');">
+    <div class="container">
+      <h1><%= @flat.name %></h1>
+      <a class="btn btn-danger" href="#">Book</a>
+    </div>
+  </div>
+  <div class="card-product">
+  <div class="card-product-infos">
+    <h2>Address: <%= @flat.address %> </h2>
+    <p><%= @flat.description %></p>
+       <p>
+      <strong>Price per Night:</strong>
+      <%= @flat.price_per_night %>
+    </p>
+    <p>
+      <strong>Number of Guests:</strong>
+      <%= @flat.number_of_guests %>
+    </p>
+  </div>
+</div>
+
+
+
+
+  <%= link_to 'Edit', edit_flat_path(@flat) %> |
+  <%= link_to 'Back', flats_path %>
+
+</div>
